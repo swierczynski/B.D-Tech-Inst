@@ -31,7 +31,7 @@ function slideBack() {
 
 
     $(window).on('scroll', function () {
-
+        //  Overlap
         const scrollValue = $(window).scrollTop();
         const windowHeight = $(window).height();
         const item1Height = $('.flex-service div:nth-of-type(1)').outerHeight();
@@ -64,3 +64,30 @@ function slideBack() {
     })
 }
 slideBack();
+
+function showUp() {
+
+$(window).on('scroll', function (){
+
+    const scrollValue = $(window).scrollTop();
+    const windowHeight = $(window).height();
+
+       // Encouragement
+
+    const itemReadyHeight = $('.encouragement h3').outerHeight();
+    const itemReadyFromTop = $('.encouragement h3').offset().top;
+
+    if(scrollValue> itemReadyFromTop + itemReadyHeight /2 - windowHeight) {
+        $('.encouragement h3').addClass('active');
+    }
+
+
+
+    if (scrollValue < 30) {
+        $('.encouragement h3').removeClass('active');
+    }
+
+})
+
+}
+showUp();
