@@ -77,14 +77,22 @@ $(window).on('scroll', function (){
     const itemReadyHeight = $('.encouragement h3').outerHeight();
     const itemReadyFromTop = $('.encouragement h3').offset().top;
 
+    const serviceTxtHeight =$('.service h2').outerHeight();
+    const serviceTxtHeightFromTop = $('.service h2').offset().top;
+
+
     if(scrollValue> itemReadyFromTop + itemReadyHeight /2 - windowHeight) {
         $('.encouragement h3').addClass('active');
+    }
+    if(scrollValue> serviceTxtHeightFromTop + serviceTxtHeight /2 - windowHeight) {
+        $('.service h2').addClass('active');
     }
 
 
 
     if (scrollValue < 30) {
         $('.encouragement h3').removeClass('active');
+        $('.service h2').removeClass('active');
     }
 
 })
