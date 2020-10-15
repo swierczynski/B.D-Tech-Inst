@@ -1,0 +1,1 @@
+Using logo of B.D-Tech-Inst and other sings which belong to company are forbidden
