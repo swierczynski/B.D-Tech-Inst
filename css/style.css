@@ -193,6 +193,9 @@ h2:hover::after {
     width: 250px;
 }
 
+
+/* Sekcja wstepna  */
+
 section.intro {
     text-align: center;
     padding: 10px;
@@ -222,7 +225,7 @@ section.intro {
     height: 500px;
     width: 250px;
     margin: 10px 0px;
-    transition: .2s;
+    transition: .5s;
     text-align: center;
     padding: 20px;
     color: black;
@@ -232,16 +235,44 @@ section.intro {
     overflow-x: hidden;
 }
 
-.overlap:nth-of-type(odd) {
-    transform: translateX(-100vw);
-}
-
-.overlap:nth-of-type(even) {
-    transform: translateX(100vw);
-}
-
 .flex-service .overlap.active {
     transform: translateX(0);
+}
+
+@media (max-width:767px) {
+
+    .overlap:nth-of-type(odd) {
+        transform: translateX(-100vw);
+    }
+
+    .overlap:nth-of-type(even) {
+        transform: translateX(100vw);
+    }
+
+
+}
+
+@media (min-width:767px) {
+    .overlap {
+        flex-basis: 25%;
+    }
+
+
+    .overlap:nth-of-type(1),
+    .overlap:nth-of-type(2) {
+        transform: translateX(-100vw);
+    }
+
+    .overlap:nth-of-type(3),
+    .overlap:nth-of-type(4) {
+        transform: translateX(100vw);
+    }
+}
+
+@media (min-width:767px) and (max-width:860px) {
+    .overlap p {
+        font-size: 14px;
+    }
 }
 
 
