@@ -1,1 +1,1 @@
-Using logo of B.D-Tech-Inst and other sings which belong to company are forbidden
+Using logo of B.D-Tech-Inst, Almeva, IRSAP or VERO and other sings which belong to company are forbidden

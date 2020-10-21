@@ -32,6 +32,8 @@ div.fixed {
 
 
 
+
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -40,6 +42,12 @@ nav {
     background-image: linear-gradient(45deg, #F7BE0C, #E00E00);
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+}
+
+@media (max-width:800px) {
+    div.fixed {
+        height: 13vh;
+    }
 }
 
 .logo img {
@@ -104,7 +112,7 @@ nav {
         height: 70vh;
         background-image: linear-gradient(45deg, #F7BE0C, #E00E00);
         z-index: 2;
-        width: 50vw;
+        width: 70vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -184,7 +192,7 @@ header .bg {
 }
 
 h1 {
-    height: 10vh;
+    height: 30px;
     font-size: 30px;
     letter-spacing: 1px;
 }
@@ -236,7 +244,7 @@ section.intro {
 }
 
 .intro i {
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 20px;
     font-size: 30px;
 }
@@ -284,6 +292,10 @@ section.intro {
 }
 
 @media (max-width:767px) {
+
+    .intro i {
+        margin-top: 80px;
+    }
 
     .overlap:nth-of-type(odd) {
         transform: translateX(-100vw);
