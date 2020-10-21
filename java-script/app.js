@@ -86,9 +86,20 @@ $(window).on('scroll', function (){
     const sliderBtnHeight =$('.slider-term-ster button').outerHeight();
     const sliderBtnFromTop = $('.slider-term-ster button').offset().top;
 
+    const itemShowWorkHeight = $('.cooworkers h3').outerHeight();
+    const itemShowWorkFromTop = $('.cooworkers h3').offset().top;
+
+
+
+
 
     if(scrollValue> sliderBtnFromTop + sliderBtnHeight /2 - windowHeight) {
         $('.slider-term-ster button').addClass('active');
+    }
+
+
+    if(scrollValue> itemShowWorkFromTop + itemShowWorkHeight /2 - windowHeight) {
+        $('.cooworkers h3').addClass('active');
     }
     if(scrollValue> sliderFromTop + sliderHeight /2 - windowHeight) {
         $('.slider-term-ster h3').addClass('active');
@@ -141,7 +152,32 @@ const sliderTerm = function(){
 
 }
 
-
-
 sliderTerm()
+
+const cooworking = function(){
+
+    const arrColor = ["./img/Almeva.png","./img/Irsap.png","./img/VERO.png"];
+    const arrGrey = ["./img/Almevaa.png","./img/Irsapa.png","./img/VEROa.png"];
+
+    let active = 0;
+
+    function changeMe (){
+
+        if(active>arrColor.length-1){
+            active=0
+        }
+        document.querySelector('.display-ban .color-img').src = arrColor[active];
+        document.querySelector('.display-ban .grey-img').src = arrColor[active];
+        active++;
+        setTimeout(changeMe,5000)
+
+    }
+
+
+    setTimeout(changeMe,5000)
+
+}
+
+
+cooworking()
 
