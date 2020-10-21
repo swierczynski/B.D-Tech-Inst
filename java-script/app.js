@@ -80,11 +80,17 @@ $(window).on('scroll', function (){
     const serviceTxtHeight =$('.service h2').outerHeight();
     const serviceTxtHeightFromTop = $('.service h2').offset().top;
 
+    const sliderHeight =$('.slider-term-ster h3').outerHeight();
+    const sliderFromTop = $('.slider-term-ster h3').offset().top;
 
+
+    if(scrollValue> sliderFromTop + sliderHeight /2 - windowHeight) {
+        $('.slider-term-ster h3').addClass('active');
+    }
     if(scrollValue> itemReadyFromTop + itemReadyHeight /2 - windowHeight) {
         $('.encouragement h3').addClass('active');
     }
-    if(scrollValue> serviceTxtHeightFromTop + serviceTxtHeight /2 - windowHeight) {
+    if(scrollValue> serviceTxtHeightFromTop + serviceTxtHeight - windowHeight) {
         $('.service h2').addClass('active');
     }
 
@@ -99,3 +105,37 @@ $(window).on('scroll', function (){
 
 }
 showUp();
+
+
+const sliderTerm = function(){
+
+    const scrollValue = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    let active=0;
+
+    const imgs = ['../img/grzejniki-zestaw.jpg', '../img/podloga-zestaw.jpg'];
+
+
+
+    const slideMe = function(){
+        active++;
+        if(active>1){
+            active=0;
+        }
+        document.querySelector('.slider-term-ster img').src = imgs[active];
+        setTimeout(slideMe,4000);
+    }
+
+    if(scrollValue > $('.slider-term-ster h3').offset().top - windowHeight){
+        setTimeout(slideMe, 0)
+    }
+
+    
+
+
+}
+
+
+
+sliderTerm()
+

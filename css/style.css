@@ -222,6 +222,14 @@ h2:hover::after {
 
 /* Sekcja wstepna  */
 
+
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+
 section.intro {
     text-align: center;
     padding: 10px;
@@ -237,6 +245,7 @@ section.intro {
     padding: 10px;
     max-width: 700px;
     margin: 0 auto;
+    line-height: 180%;
 }
 
 .service .flex-service {
@@ -344,12 +353,12 @@ section.intro {
 
 .encouragement {
     margin: 3% 0;
-    background-image: url('../img/pexels-cottonbro-4752984_Easy-Resize.com.jpg');
+    background-image: url('../img/kaloryfer.jpg');
     background-position: center bottom;
     background-size: cover;
     background-attachment: fixed;
     color: white;
-    height: 60vh;
+    height: 70vh;
 }
 
 .encouragement .bg {
@@ -409,6 +418,78 @@ section.intro {
     }
 }
 
+.slider-term-ster {
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.slider-term-ster img {
+    width: 100%;
+    animation: showMe 4s infinite both;
+}
+
+@keyframes showMe {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.slider-term-ster h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    letter-spacing: 3px;
+    opacity: 0;
+    font-weight: bold;
+}
+
+.slider-term-ster h3.active {
+    animation: showUp .7s both;
+}
+
+.slider-term-ster button {
+    display: block;
+    margin: 4% auto;
+    width: 70%;
+    max-width: 600px;
+    font-size: 30px;
+    padding: 1% 2%;
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #F7BE0C, #E00E00);
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
+@media (max-width:700px) {
+
+    .slider-term-ster h3 {
+        font-size: 21px;
+    }
+
+
+    .slider-term-ster button {
+        font-size: 19px;
+    }
+}
+
 .added {
-    height: 100vh;
+    height: 200vh;
 }
