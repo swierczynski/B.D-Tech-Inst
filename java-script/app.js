@@ -156,8 +156,8 @@ sliderTerm()
 
 const cooworking = function(){
 
-    const arrColor = ["./img/Almeva.png","./img/Irsap.png","./img/VERO.png"];
-    const arrGrey = ["./img/Almevaa.png","./img/Irsapa.png","./img/VEROa.png"];
+    const arrColor = ["./img/Almeva.png","./img/Irsap.png","./img/VERO.png","./img/AristonNew.jpg"];
+    const arrGrey = ["./img/Almevaa.png","./img/Irsapa.png","./img/VEROa.png","./img/AristonNewa.png"];
 
     let active = 0;
 
