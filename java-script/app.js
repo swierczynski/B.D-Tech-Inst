@@ -83,7 +83,13 @@ $(window).on('scroll', function (){
     const sliderHeight =$('.slider-term-ster h3').outerHeight();
     const sliderFromTop = $('.slider-term-ster h3').offset().top;
 
+    const sliderBtnHeight =$('.slider-term-ster button').outerHeight();
+    const sliderBtnFromTop = $('.slider-term-ster button').offset().top;
 
+
+    if(scrollValue> sliderBtnFromTop + sliderBtnHeight /2 - windowHeight) {
+        $('.slider-term-ster button').addClass('active');
+    }
     if(scrollValue> sliderFromTop + sliderHeight /2 - windowHeight) {
         $('.slider-term-ster h3').addClass('active');
     }

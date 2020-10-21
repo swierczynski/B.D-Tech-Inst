@@ -359,7 +359,10 @@ section.intro {
     background-attachment: fixed;
     color: white;
     height: 70vh;
+    font-size: 25px;
+    letter-spacing: 1px;
 }
+
 
 .encouragement .bg {
     height: 100%;
@@ -415,7 +418,9 @@ section.intro {
     .encouragement .txt {
         width: 80%;
         left: 10%;
+        font-size: 18px;
     }
+
 }
 
 .slider-term-ster {
@@ -454,6 +459,7 @@ section.intro {
     letter-spacing: 3px;
     opacity: 0;
     font-weight: bold;
+    margin-bottom: 50px;
 }
 
 .slider-term-ster h3.active {
@@ -472,11 +478,23 @@ section.intro {
     background-image: linear-gradient(45deg, #F7BE0C, #E00E00);
     color: white;
     font-weight: bold;
+    opacity: 0;
+    margin-top: 50px;
 }
 
+.slider-term-ster p {
+    padding: 20px 60px;
+    text-align: center;
+    line-height: 180%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
 
-
-
+.slider-term-ster button.active {
+    animation: showUp .7s both;
+}
 
 @media (max-width:700px) {
 
